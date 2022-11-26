@@ -10,7 +10,7 @@ default. In the simplest configuration, simply enable
 
 .. code:: elisp
 
-  (require 'ligature-pragmata)
+  (require 'ligature-pragmatapro)
   (global-ligature-mode)
 
 To be more selective, just use mode hooks:
