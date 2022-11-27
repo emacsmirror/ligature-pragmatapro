@@ -24,6 +24,7 @@ are available in `ligature-pragmatapro-ligatures` to be used directly:
 
 .. code:: elisp
 
+  (require 'ligature-pragmatapro)
   (ligature-set-ligatures 'prog-mode ligature-pragmatapro-ligatures)
 
 This package is fully documented in the source and maintained through MELPA:

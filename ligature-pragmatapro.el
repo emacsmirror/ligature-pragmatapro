@@ -38,6 +38,7 @@
 ;; ligatures are available in `ligature-pragmatapro-ligatures' to be
 ;; used directly:
 ;;
+;;   (require 'ligature-pragmatapro)
 ;;   (ligature-set-ligatures 'prog-mode ligature-pragmatapro-ligatures)
 ;;
 ;; [0] ligature: https://github.com/mickeynp/ligature.el
@@ -76,7 +77,6 @@
 (require 'ligature)
 (eval-when-compile (require 'rx))
 
-;;;###autoload
 (defconst ligature-pragmatapro-ligatures
   '(("!" (rx (or "=<" "=" "==" "≡" "≡≡")))
     ("#" (rx (or "#" "(" ">" "[" "?" "_" "_(" "{")))
