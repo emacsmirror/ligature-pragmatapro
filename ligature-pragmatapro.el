@@ -71,6 +71,7 @@
 ;; ≡/ ≡/≡ ≡:≡ ≡≡ ≡≡≡
 
 (require 'ligature)
+(eval-when-compile (require 'rx))
 
 (defconst ligature-pragmatapro-ligatures
   '(("!" (rx (or "=<" "=" "==" "≡" "≡≡")))
