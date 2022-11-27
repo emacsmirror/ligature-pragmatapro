@@ -35,8 +35,8 @@
 ;;   (add-hook 'haskell-mode-hook 'ligature-mode)
 ;;
 ;; For even more advanced custom configuration, all PragmataPro
-;; ligatures is available in `ligature-pragmatapro-ligatures' to be used
-;; directly:
+;; ligatures are available in `ligature-pragmatapro-ligatures' to be
+;; used directly:
 ;;
 ;;   (ligature-set-ligatures 'prog-mode ligature-pragmatapro-ligatures)
 ;;

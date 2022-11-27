@@ -20,7 +20,7 @@ To be more selective, just use mode hooks:
   (add-hook 'haskell-mode-hook 'ligature-mode)
 
 For even more advanced custom configuration, all PragmataPro ligatures
-is available in `ligature-pragmatapro-ligatures` to be used directly:
+are available in `ligature-pragmatapro-ligatures` to be used directly:
 
 .. code:: elisp
 
