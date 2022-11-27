@@ -23,19 +23,22 @@
 ;; `ligature-pragmatapro' provides pre-baked `ligature'[0] configuration
 ;; for the PragmataPro[1] programming font.
 ;;
-;; Support is configured for all programming modes, but not enabled by
-;; default. In the simplest configuration, simply enable
-;; `global-ligature-mode':
+;; Support is configured for all programming modes by calling
+;; `ligature-pragmatapro-setup', then enabling `ligature':
 ;;
-;;   (require 'ligature-pragmatapro)
+;;   (ligature-pragmatapro-setup)
 ;;   (global-ligature-mode)
 ;;
 ;; To be more selective, just use mode hooks:
 ;;
+;;   (ligature-pragmatapro-setup)
 ;;   (add-hook 'haskell-mode-hook 'ligature-mode)
 ;;
-;; For even more advanced custom configuration, the full list of RX
-;; ligatures is available in `ligature-pragmatapro-ligatures'.
+;; For even more advanced custom configuration, all PragmataPro
+;; ligatures is available in `ligature-pragmatapro-ligatures' to be used
+;; directly:
+;;
+;;   (ligature-set-ligatures 'prog-mode ligature-pragmatapro-ligatures)
 ;;
 ;; [0] ligature: https://github.com/mickeynp/ligature.el
 ;; [1] PragmataPro: https://fsd.it/shop/fonts/pragmatapro/
@@ -73,6 +76,7 @@
 (require 'ligature)
 (eval-when-compile (require 'rx))
 
+;;;###autoload
 (defconst ligature-pragmatapro-ligatures
   '(("!" (rx (or "=<" "=" "==" "≡" "≡≡")))
     ("#" (rx (or "#" "(" ">" "[" "?" "_" "_(" "{")))
@@ -92,7 +96,10 @@
     "$>" "%=" "(|" "*>" ".=" "?." "[[" "[|" "]]" "_|_")
   "RX ligatures for PragmataPro.")
 
-(ligature-set-ligatures 'prog-mode ligature-pragmatapro-ligatures)
+;;;###autoload
+(defun ligature-pragmatapro-setup ()
+  "Setup PragmataPro ligatures for modes based on `prog-mode'."
+  (ligature-set-ligatures 'prog-mode ligature-pragmatapro-ligatures))
 
 (provide 'ligature-pragmatapro)
 
